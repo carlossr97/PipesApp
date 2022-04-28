@@ -1,0 +1,21 @@
+<div class="text-color">
+    <h1>DecimalPipe y Porcentaje</h1>
+    <p>Pipes incluidos en angular - Usualmente en el common Module</p>
+</div>
+<div class="grid text-color">
+    <div class="col-4">
+        <p-card header="Decimal pipe" [subheader]="numero.toString()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{numero | number}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Currency pipe" [subheader]="numero.toString()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{numero | currency:'$'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Porcentaje pipe" [subheader]="numero.toString()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{numero | percent}}
+        </p-card>
+    </div>
+</div>

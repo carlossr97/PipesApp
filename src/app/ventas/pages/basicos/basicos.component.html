@@ -1,0 +1,76 @@
+<div class="text-color">
+    <h1>Pipes Basicos</h1>
+    <p>Estos son pipes basicos</p>
+</div>
+
+<div class="grid text-color">
+    <div class="col-4">
+        <p-card header="UPPERCASE" [subheader]="nombreLower" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{nombreLower | uppercase}}
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="lowercase" [subheader]="nombreUpper" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{nombreUpper | lowercase}}
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="Titlecase" [subheader]="nombreCompleto" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{nombreCompleto | titlecase}}
+        </p-card>
+    </div>
+</div>
+
+
+<div class="text-color">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>Pipes de fechas</p>
+</div>
+<div class="grid text-color">
+
+    <div class="col-6">
+        <p-card header="Fecha" styleClass="p-card-shadow">
+            <ul style="line-height: 8px;">
+                <li>
+                    <p>fecha</p>
+                </li>
+                <li>
+                    <p>fecha | date</p>
+                </li>
+                <li>
+                    <p>fecha | date:'short'</p>
+                </li>
+                <li>
+                    <p>fecha | date:'long'</p>
+                </li>
+                <li>
+                    <p>custom fecha | date:'dd/MM/yyyy'</p>
+                </li>
+            </ul>
+        </p-card>
+    </div>
+
+    <div class="col-6">
+        <p-card header="Fecha pipe" styleClass="p-card-shadow">
+            <ul>
+                <li>
+                    <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{fecha}}
+                </li>
+                <li>
+                    <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{fecha | date}}
+                </li>
+                <li>
+                    <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{fecha | date:'short'}}
+                </li>
+                <li>
+                    <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{fecha | date:'long'}}
+                </li>
+                <li>
+                    <i class="pi pi-arrow-right" style="font-size: 1rem"></i> {{fecha | date:'dd/MM/yyyy'}}
+                </li>
+            </ul>
+        </p-card>
+    </div>
+</div>

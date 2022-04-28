@@ -1,0 +1,44 @@
+<div class="text-color">
+    <h1>Pipes No Tan Comunes</h1>
+    <p>Pipes incluidos en angular - Usualmente en el common Module</p>
+</div>
+<div class="grid text-color">
+
+    <div class="col-6">
+        <p-fieldset legend="¡18nSelect Pipe" [toggleable]="true" [collapsed]="true">
+            <p>Buenas tardes {{nombre}} espero alla sido un placer {{genero | i18nSelect:mapa}} a nuestro evento.</p>
+            <button pButton pRipple type="button" label="Cambiar Persona" class="p-button-secondary p-button-text" (click)="cambiarCliente()"></button>
+        </p-fieldset>
+    </div>
+    <div class="col-6">
+        <p-fieldset legend="¡18nPlural Pipe" [toggleable]="true" [collapsed]="true">
+            <p>Actualmente {{clientes.length | i18nPlural:mapaPlural}}</p>
+            <button pButton pRipple type="button" label="Eliminar Cliente" class="p-button-secondary p-button-text" (click)="borrarCliente()"></button>
+        </p-fieldset>
+    </div>
+    <div class="col-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true" [collapsed]="true">
+            <p>Original</p>
+            <pre>{{clientes}}</pre>
+            <hr>
+            <p>Slice:0</p>
+            <pre>{{clientes | slice:0}}</pre>
+            <hr>
+            <p>Slice:0:1</p>
+            <pre>{{clientes | slice:0:1}}</pre>
+            <hr>
+            <p>Slice:0:2</p>
+            <pre>{{clientes | slice:0:2}}</pre>
+
+
+            <button pButton pRipple type="button" label="Eliminar Cliente" class="p-button-secondary p-button-text" (click)="borrarCliente()"></button>
+        </p-fieldset>
+    </div>
+
+    <div class="col-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true" [collapsed]="true">
+            <p>Estamos obteniendo valores asincronos de un observable de la funcion interval de rxjs.</p>
+            <p>{{observable | async}}</p>
+        </p-fieldset>
+    </div>
+</div>
